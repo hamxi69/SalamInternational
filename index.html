@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -12,12 +13,24 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <!-- Lightbox for beautiful full-screen certificate view -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/css/lightbox.min.css" rel="stylesheet">
+    <link href="https://db.onlinewebfonts.com/c/81d6c500d5ce59b178f551410e0f9690?family=CCThatsAllFolks"
+        rel="stylesheet">
     <style>
         /*
            V5 ULTRA-MODERN DESIGN SYSTEM - SALAM'S INTERNATIONAL
            Colors: Logo Green (#43a047), Pure White, Absolute Black
         */
         @import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Sora:wght@300;400;500;600;700;800&display=swap');
+
+        @font-face {
+            font-family: "CCThatsAllFolks";
+            src: url("https://db.onlinewebfonts.com/t/81d6c500d5ce59b178f551410e0f9690.eot");
+            src: url("https://db.onlinewebfonts.com/t/81d6c500d5ce59b178f551410e0f9690.eot?#iefix")format("embedded-opentype"),
+                url("https://db.onlinewebfonts.com/t/81d6c500d5ce59b178f551410e0f9690.woff2")format("woff2"),
+                url("https://db.onlinewebfonts.com/t/81d6c500d5ce59b178f551410e0f9690.woff")format("woff"),
+                url("https://db.onlinewebfonts.com/t/81d6c500d5ce59b178f551410e0f9690.ttf")format("truetype"),
+                url("https://db.onlinewebfonts.com/t/81d6c500d5ce59b178f551410e0f9690.svg#CCThatsAllFolks")format("svg");
+        }
 
         :root {
             --primary: #43a047;
@@ -43,7 +56,12 @@
             overflow-x: hidden;
         }
 
-        h1, h2, h3, h4, h5, h6 {
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
             font-family: 'Sora', sans-serif;
             font-weight: 800;
             letter-spacing: -0.04em;
@@ -69,11 +87,11 @@
             z-index: -1;
         }
 
-            .hero-video-container video {
-                width: 100%;
-                height: 100%;
-                object-fit: cover;
-            }
+        .hero-video-container video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
 
         .hero-overlay {
             position: absolute;
@@ -81,7 +99,7 @@
             left: 0;
             width: 100%;
             height: 100%;
-            background: linear-gradient(to right, rgba(0,0,0,0.8) 0%, rgba(0,0,0,0.3) 100%);
+            background: linear-gradient(to right, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.3) 100%);
             z-index: 0;
         }
 
@@ -101,20 +119,20 @@
             border-radius: 30px;
             transition: all 0.6s cubic-bezier(0.16, 1, 0.3, 1);
             overflow: hidden;
-            box-shadow: 0 20px 50px rgba(0,0,0,0.3);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
         }
 
-            .certificate-wrapper::before {
-                content: '';
-                position: absolute;
-                top: -50%;
-                left: -50%;
-                width: 200%;
-                height: 200%;
-                background: radial-gradient(circle, rgba(67, 160, 71, 0.2) 0%, transparent 70%);
-                animation: rotate-glow 10s linear infinite;
-                z-index: -1;
-            }
+        .certificate-wrapper::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(67, 160, 71, 0.2) 0%, transparent 70%);
+            animation: rotate-glow 10s linear infinite;
+            z-index: -1;
+        }
 
         @keyframes rotate-glow {
             from {
@@ -151,7 +169,7 @@
             font-size: 10px;
             font-weight: 800;
             letter-spacing: 2px;
-            box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
             z-index: 2;
         }
 
@@ -182,52 +200,53 @@
             z-index: 2000;
         }
 
-            .nav-v5.scrolled {
-                padding: 12px 0;
-                background: rgba(255, 255, 255, 0.98);
-                backdrop-filter: blur(20px);
-                border-bottom: 1px solid rgba(67, 160, 71, 0.1);
-                box-shadow: 0 10px 30px rgba(0,0,0,0.05);
-            }
+        .nav-v5.scrolled {
+            padding: 12px 0;
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(67, 160, 71, 0.1);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
 
-                .nav-v5.scrolled .nav-link-v5 {
-                    color: var(--black) !important;
-                }
+        .nav-v5.scrolled .nav-link-v5 {
+            color: var(--black) !important;
+        }
 
-                .nav-v5.scrolled .brand-text h4 {
-                    color: var(--black) !important;
-                }
+        .nav-v5.scrolled .brand-text h4 {
+            color: var(--black) !important;
+        }
 
         .nav-link-v5 {
             font-weight: 700;
             font-size: 14px;
             color: var(--white) !important;
             text-transform: uppercase;
-            letter-spacing: 1px;
-            margin: 0 15px;
+            margin: 0 14px;
             transition: var(--transition-base);
             position: relative;
             text-decoration: none;
         }
 
-            .nav-link-v5::after {
-                content: '';
-                position: absolute;
-                bottom: -5px;
-                left: 0;
-                width: 0;
-                height: 2px;
-                background: var(--primary);
-                transition: var(--transition-base);
-            }
+        .nav-link-v5::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--primary);
+            transition: var(--transition-base);
+        }
 
-            .nav-link-v5:hover::after, .nav-link-v5.active::after {
-                width: 100%;
-            }
+        .nav-link-v5:hover::after,
+        .nav-link-v5.active::after {
+            width: 100%;
+        }
 
-            .nav-link-v5:hover, .nav-link-v5.active {
-                color: var(--primary) !important;
-            }
+        .nav-link-v5:hover,
+        .nav-link-v5.active {
+            color: var(--primary) !important;
+        }
 
         .btn-v5 {
             padding: 14px 32px;
@@ -244,11 +263,11 @@
             color: var(--white) !important;
         }
 
-            .btn-v5-primary:hover {
-                background: var(--primary-dark);
-                transform: translateY(-3px);
-                box-shadow: 0 10px 20px rgba(67, 160, 71, 0.3);
-            }
+        .btn-v5-primary:hover {
+            background: var(--primary-dark);
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(67, 160, 71, 0.3);
+        }
 
         .section-padding {
             padding: 90px 0;
@@ -284,10 +303,10 @@
             justify-content: center;
         }
 
-            .stat-box-v5:hover {
-                transform: translateY(-8px);
-                box-shadow: 0 20px 35px rgba(0,0,0,0.1);
-            }
+        .stat-box-v5:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
+        }
 
         .stat-icon {
             font-size: 3rem;
@@ -321,10 +340,10 @@
             background-color: var(--primary) !important;
         }
 
-            .bg-success .stat-icon,
-            .bg-success .stat-number-v5 {
-                color: white !important;
-            }
+        .bg-success .stat-icon,
+        .bg-success .stat-number-v5 {
+            color: white !important;
+        }
 
         .journey-timeline-item {
             background: white;
@@ -333,14 +352,14 @@
             height: 100%;
             transition: var(--transition-base);
             border: 1px solid var(--grey-200);
-            box-shadow: 0 5px 15px rgba(0,0,0,0.02);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.02);
         }
 
-            .journey-timeline-item:hover {
-                transform: translateY(-8px);
-                border-color: var(--primary);
-                box-shadow: 0 20px 30px rgba(67,160,71,0.1);
-            }
+        .journey-timeline-item:hover {
+            transform: translateY(-8px);
+            border-color: var(--primary);
+            box-shadow: 0 20px 30px rgba(67, 160, 71, 0.1);
+        }
 
         .year-badge {
             font-size: 1rem;
@@ -363,17 +382,17 @@
             border-radius: 28px;
             overflow: hidden;
             transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
-            box-shadow: 0 15px 35px rgba(0,0,0,0.05);
-            border: 1px solid rgba(0,0,0,0.05);
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+            border: 1px solid rgba(0, 0, 0, 0.05);
             height: 100%;
             cursor: pointer;
         }
 
-            .cert-card:hover {
-                transform: translateY(-12px);
-                box-shadow: 0 30px 50px rgba(67,160,71,0.2);
-                border-color: var(--primary);
-            }
+        .cert-card:hover {
+            transform: translateY(-12px);
+            box-shadow: 0 30px 50px rgba(67, 160, 71, 0.2);
+            border-color: var(--primary);
+        }
 
         .cert-image-wrapper {
             padding: 25px;
@@ -390,7 +409,7 @@
             max-height: 360px;
             object-fit: contain;
             transition: transform 0.4s ease;
-            filter: drop-shadow(0 8px 20px rgba(0,0,0,0.1));
+            filter: drop-shadow(0 8px 20px rgba(0, 0, 0, 0.1));
             border-radius: 12px;
         }
 
@@ -434,7 +453,7 @@
             position: absolute;
             bottom: 20px;
             right: 20px;
-            background: rgba(67,160,71,0.9);
+            background: rgba(67, 160, 71, 0.9);
             color: white;
             width: 40px;
             height: 40px;
@@ -454,14 +473,14 @@
         .about-image-card {
             border-radius: 28px;
             overflow: hidden;
-            box-shadow: 0 20px 35px rgba(0,0,0,0.1);
+            box-shadow: 0 20px 35px rgba(0, 0, 0, 0.1);
             transition: transform 0.4s ease;
             height: 60% !important;
         }
 
-            .about-image-card:hover {
-                transform: translateY(-8px);
-            }
+        .about-image-card:hover {
+            transform: translateY(-8px);
+        }
 
         .about-img {
             width: 100%;
@@ -487,15 +506,15 @@
             border-radius: 32px;
             overflow: hidden;
             background: #fff;
-            box-shadow: 0 25px 45px -12px rgba(0,0,0,0.25);
+            box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.25);
             transition: all 0.5s cubic-bezier(0.2, 0.9, 0.4, 1.1);
             cursor: pointer;
         }
 
-            .hkc-art-card:hover {
-                transform: translateY(-10px) scale(1.01);
-                box-shadow: 0 35px 55px -15px rgba(67,160,71,0.3);
-            }
+        .hkc-art-card:hover {
+            transform: translateY(-10px) scale(1.01);
+            box-shadow: 0 35px 55px -15px rgba(67, 160, 71, 0.3);
+        }
 
         .hkc-img-modern {
             width: 100%;
@@ -514,7 +533,7 @@
             bottom: 0;
             left: 0;
             right: 0;
-            background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, rgba(0,0,0,0.2) 50%, transparent 100%);
+            background: linear-gradient(to top, rgba(0, 0, 0, 0.7) 0%, rgba(0, 0, 0, 0.2) 50%, transparent 100%);
             padding: 2rem 1.5rem 1rem;
             opacity: 0;
             transition: opacity 0.4s ease;
@@ -527,7 +546,7 @@
 
         .hkc-badge-pill {
             display: inline-block;
-            background: rgba(67,160,71,0.9);
+            background: rgba(67, 160, 71, 0.9);
             backdrop-filter: blur(4px);
             color: white;
             font-size: 0.7rem;
@@ -549,7 +568,7 @@
             position: absolute;
             top: 20px;
             left: 20px;
-            background: rgba(255,255,255,0.85);
+            background: rgba(255, 255, 255, 0.85);
             backdrop-filter: blur(8px);
             border-radius: 30px;
             padding: 6px 16px;
@@ -576,9 +595,9 @@
             border-top: 1px solid rgba(67, 160, 71, 0.2);
         }
 
-            .footer-v5 p {
-                color: rgba(255, 255, 255, 0.7);
-            }
+        .footer-v5 p {
+            color: rgba(255, 255, 255, 0.7);
+        }
 
         .footer-logo-img {
             height: 60px;
@@ -596,10 +615,10 @@
             font-weight: 500;
         }
 
-            .footer-link-v5:hover {
-                color: var(--primary);
-                transform: translateX(8px);
-            }
+        .footer-link-v5:hover {
+            color: var(--primary);
+            transform: translateX(8px);
+        }
 
         .footer-v5 h6 {
             color: var(--primary);
@@ -640,15 +659,16 @@
         }
     </style>
 </head>
+
 <body>
 
     <!-- Navigation V5 -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-v5 fixed-top">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center" href="index.html">
-                <img src="https://thehamzadev.sirv.com/content/logo.png" alt="Salam's International Logo" class="rounded-circle me-3 shadow-sm" style="height: 55px; width: 55px; object-fit: cover; border: 2px solid #43a047;">
+                <img src="images/Logo.jpg" alt="Salam's International Logo" class="rounded-circle me-3" style="height: 50px; width: 50px; object-fit: cover; border: 2px solid #43a047;">
                 <div class="brand-text">
-                    <h4 class="mb-0 text-white fw-800" style="line-height: 1; letter-spacing: 1px;">SALAM'S</h4>
+                    <h4 class="mb-0 text-white fw-800"  style="line-height: 1; letter-spacing: 1px; font-family: 'CCThatsAllFolks', sans-serif;">SALAM'S</h4>
                     <span class="text-primary fw-bold small" style="letter-spacing: 3px; font-size: 10px;">INTERNATIONAL</span>
                 </div>
             </a>
@@ -657,14 +677,36 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item"><a class="nav-link-v5 active" href="">HOME</a></li>
-                    <li class="nav-item"><a class="nav-link-v5" href="">ABOUT US</a></li>
-                    <li class="nav-item"><a class="nav-link-v5" href="">OUR TEAM</a></li>
-                    <li class="nav-item"><a class="nav-link-v5" href="">PRODUCT & SERVICES</a></li>
-                    <li class="nav-item"><a class="nav-link-v5" href="">NEWS & EVENTS</a></li>
-                    <li class="nav-item"><a class="nav-link-v5" href="">HSE MANAGEMENT</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link-v5 active" href="index.html">HOME</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link-v5" href="about.html">ABOUT US</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link-v5" href="team.html">OUR TEAM</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link-v5" href="services.html">PRODUCT & SERVICES</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link-v5" href="news.html">NEWS & EVENTS</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link-v5" href="hse.html">HSE MANAGEMENT</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link-v5" href="career.html">CAREERS</a>
+                    </li>
+
                     <li class="nav-item ms-lg-4">
-                        <a href="" class="btn btn-v5 btn-v5-primary">CONTACT</a>
+                        <a href="contact.html" class="btn btn-v5 btn-v5-primary">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -674,7 +716,8 @@
     <!-- Hero V5 with Video -->
     <section class="hero-v5">
         <div class="hero-video-container">
-            <video autoplay muted loop playsinline poster="https://images.pexels.com/photos/1474411/pexels-photo-1474411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
+            <video autoplay muted loop playsinline
+                poster="https://images.pexels.com/photos/1474411/pexels-photo-1474411.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1">
                 <source src="https://www.pexels.com/download/video/1474411/" type="video/mp4">
             </video>
         </div>
@@ -685,7 +728,9 @@
                     <div class="certificate-wrapper">
                         <div class="certificate-badge">OFFICIAL</div>
                         <div class="certificate-img-container shadow-sm">
-                            <img src="https://thehamzadev.sirv.com/content/statementofcompliance.jpeg" alt="ClassNK Certificate" class="img-fluid rounded-10" style="max-height: 520px; width: auto; left: 18px; position: relative;">
+                            <img src="https://thehamzadev.sirv.com/content/statementofcompliance.jpeg"
+                                alt="ClassNK Certificate" class="img-fluid rounded-10"
+                                style="max-height: 520px; width: auto; left: 18px; position: relative;">
                         </div>
                         <div class="certificate-content mt-4 text-center">
                             <h5 class="fw-800 mb-1 text-uppercase">Statement of Compliance</h5>
@@ -694,9 +739,9 @@
                     </div>
                 </div>
                 <div class="col-lg-7" data-aos="fade-left" data-aos-duration="1200">
-                    <span class="section-tag text-white">EST. 2000</span>
-                    <h1 class="hero-title-v5 fw-800">Pakistan’s First ClassNK Certified <br><span>Compliant Green Ship Recycling</span> <br>in Pakistan!</h1>
-                    <p class="lead mb-5 opacity-75 fs-5">We specialize in environmentally sound and ethically responsible ship recycling fully aligned with the Hong Kong International Convention for the Safe and Environmentally Sound Recycling of Ships. <br><br> Our facility operates with strict compliance, world-class safety standards, and a commitment to protecting workers, communities, and our coastline.</p>
+                    <span class="section-tag text-white">CLASSNK CERTIFIED</span>
+                    <h1 class="hero-title-v5 fw-800">Salam’s International: <br><span>Safe, Green Ship Recycling</span></h1>
+                    <p class="lead mb-5 opacity-75 fs-5">Salam’s International is a leading industrial ship recycling firm specializing in maritime safety and environmental sustainability. Our yard is ClassNK Certified, and our mission is to recycle end-of-life vessels using safe and modern techniques, setting new benchmarks for the industry.</p>
                     <div class="d-flex gap-4 mb-4">
                         <a href="#" class="btn btn-v5 btn-v5-primary px-5 py-3">OUR SERVICES</a>
                         <a href="#" class="btn btn-v5 border-white text-white px-5 py-3">LEARN MORE</a>
@@ -748,27 +793,72 @@
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="section-tag">OFFICIAL CREDENTIALS</span>
                 <h2 class="section-title-v5 fw-800">Certificate of <span class="text-primary">Registration</span></h2>
-                <p class="col-lg-7 mx-auto text-muted fs-5">Our prestigious certifications validating compliance with international green ship recycling standards.</p>
+                <p class="col-lg-7 mx-auto text-muted fs-5">Our prestigious certifications validating compliance with
+                    international green ship recycling standards.</p>
             </div>
             <div class="row g-5">
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="0">
-                    <a href="https://thehamzadev.sirv.com/content/cer1.png" data-lightbox="certificates" data-title="ClassNK Compliance Certificate - HKC Certified Facility">
-                        <div class="cert-card"><div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer1.png" alt="ClassNK Certificate" class="cert-image-full"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div></div><div class="cert-card-body"><div class="badge-cert"><i class="fas fa-certificate me-1"></i> ClassNK</div><h5 class="cert-title">Compliance Certification</h5><p class="cert-subtitle">HKC Certified Facility</p></div></div>
+                    <a href="https://thehamzadev.sirv.com/content/cer1.png" data-lightbox="certificates"
+                        data-title="ClassNK Compliance Certificate - HKC Certified Facility">
+                        <div class="cert-card">
+                            <div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer1.png"
+                                    alt="ClassNK Certificate" class="cert-image-full">
+                                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                            </div>
+                            <div class="cert-card-body">
+                                <div class="badge-cert"><i class="fas fa-certificate me-1"></i> ClassNK</div>
+                                <h5 class="cert-title">Compliance Certification</h5>
+                                <p class="cert-subtitle">HKC Certified Facility</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
-                    <a href="https://thehamzadev.sirv.com/content/cer2.png" data-lightbox="certificates" data-title="Environmental Safety Certificate - ISO 14001:2015">
-                        <div class="cert-card"><div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer2.png" alt="Environmental Safety Certificate" class="cert-image-full"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div></div><div class="cert-card-body"><div class="badge-cert"><i class="fas fa-leaf me-1"></i> Green Standard</div><h5 class="cert-title">Environmental Safety</h5><p class="cert-subtitle">ISO 14001:2015</p></div></div>
+                    <a href="https://thehamzadev.sirv.com/content/cer2.png" data-lightbox="certificates"
+                        data-title="Environmental Safety Certificate - ISO 14001:2015">
+                        <div class="cert-card">
+                            <div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer2.png"
+                                    alt="Environmental Safety Certificate" class="cert-image-full">
+                                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                            </div>
+                            <div class="cert-card-body">
+                                <div class="badge-cert"><i class="fas fa-leaf me-1"></i> Green Standard</div>
+                                <h5 class="cert-title">Environmental Safety</h5>
+                                <p class="cert-subtitle">ISO 14001:2015</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
-                    <a href="https://thehamzadev.sirv.com/content/cer3.png" data-lightbox="certificates" data-title="Clean NK Excellence Certificate - Technical Innovation Award">
-                        <div class="cert-card"><div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer3.png" alt="Clean NK Excellence" class="cert-image-full"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div></div><div class="cert-card-body"><div class="badge-cert"><i class="fas fa-star me-1"></i> Excellence</div><h5 class="cert-title">Clean NK Excellence</h5><p class="cert-subtitle">Technical Innovation</p></div></div>
+                    <a href="https://thehamzadev.sirv.com/content/cer3.png" data-lightbox="certificates"
+                        data-title="Clean NK Excellence Certificate - Technical Innovation Award">
+                        <div class="cert-card">
+                            <div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer3.png"
+                                    alt="Clean NK Excellence" class="cert-image-full">
+                                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                            </div>
+                            <div class="cert-card-body">
+                                <div class="badge-cert"><i class="fas fa-star me-1"></i> Excellence</div>
+                                <h5 class="cert-title">Clean NK Excellence</h5>
+                                <p class="cert-subtitle">Technical Innovation</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
                 <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
-                    <a href="https://thehamzadev.sirv.com/content/cer4.png" data-lightbox="certificates" data-title="Global Recognition Certificate - IMO Standards Compliant">
-                        <div class="cert-card"><div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer4.png" alt="Global Recognition" class="cert-image-full"><div class="zoom-icon"><i class="fas fa-search-plus"></i></div></div><div class="cert-card-body"><div class="badge-cert"><i class="fas fa-globe me-1"></i> International</div><h5 class="cert-title">Global Recognition</h5><p class="cert-subtitle">IMO Standards</p></div></div>
+                    <a href="https://thehamzadev.sirv.com/content/cer4.png" data-lightbox="certificates"
+                        data-title="Global Recognition Certificate - IMO Standards Compliant">
+                        <div class="cert-card">
+                            <div class="cert-image-wrapper"><img src="https://thehamzadev.sirv.com/content/cer4.png"
+                                    alt="Global Recognition" class="cert-image-full">
+                                <div class="zoom-icon"><i class="fas fa-search-plus"></i></div>
+                            </div>
+                            <div class="cert-card-body">
+                                <div class="badge-cert"><i class="fas fa-globe me-1"></i> International</div>
+                                <h5 class="cert-title">Global Recognition</h5>
+                                <p class="cert-subtitle">IMO Standards</p>
+                            </div>
+                        </div>
                     </a>
                 </div>
             </div>
@@ -781,13 +871,41 @@
             <div class="text-center mb-5" data-aos="fade-up">
                 <span class="section-tag">PROUD MILESTONES</span>
                 <h2 class="section-title-v5 fw-800">Our Journey of <span class="text-primary">Success</span></h2>
-                <p class="col-lg-7 mx-auto text-muted">Setting benchmarks in green ship recycling with global recognitions and certifications.</p>
+                <p class="col-lg-7 mx-auto text-muted">Setting benchmarks in green ship recycling with global
+                    recognitions and certifications.</p>
             </div>
             <div class="row g-4">
-                <div class="col-md-6 col-lg-3" data-aos="fade-up"><div class="journey-timeline-item text-center"><div class="year-badge">2018</div><i class="fas fa-certificate fa-3x text-primary mb-3"></i><h5 class="fw-800">Pioneer in Standards</h5><p class="text-muted">First ISO-certified company in our sector, laying foundation for quality management.</p></div></div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100"><div class="journey-timeline-item text-center"><div class="year-badge">2022</div><i class="fas fa-globe-americas fa-3x text-primary mb-3"></i><h5 class="fw-800">Global Recognition</h5><p class="text-muted">IMO's Mr. Ameen Dominguez visited our yard — testament to superior security & safety.</p></div></div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200"><div class="journey-timeline-item text-center"><div class="year-badge">2024</div><i class="fas fa-leaf fa-3x text-primary mb-3"></i><h5 class="fw-800">Clean NK Excellence</h5><p class="text-muted">Achieved first CleanNK Certification, highlighting technical & operational excellence.</p></div></div>
-                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300"><div class="journey-timeline-item text-center"><div class="year-badge">Today</div><i class="fas fa-trophy fa-3x text-primary mb-3"></i><h5 class="fw-800">Top Ranking</h5><p class="text-muted">Proudly ranked #2 in HKC (Hong Kong Convention) compliance.</p></div></div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up">
+                    <div class="journey-timeline-item text-center">
+                        <div class="year-badge">2018</div><i class="fas fa-certificate fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-800">Pioneer in Standards</h5>
+                        <p class="text-muted">First ISO-certified company in our sector, laying foundation for quality
+                            management.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="journey-timeline-item text-center">
+                        <div class="year-badge">2023</div><i class="fas fa-globe-americas fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-800">Global Recognition</h5>
+                        <p class="text-muted">IMO's Mr. Arsenio visited our yard — testament to superior security &
+                            safety.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="journey-timeline-item text-center">
+                        <div class="year-badge">2026</div><i class="fas fa-leaf fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-800">Clean NK Excellence</h5>
+                        <p class="text-muted">Achieved first CleanNK Certification, highlighting technical & operational
+                            excellence.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="journey-timeline-item text-center">
+                        <div class="year-badge">Today</div><i class="fas fa-trophy fa-3x text-primary mb-3"></i>
+                        <h5 class="fw-800">Top Ranking</h5>
+                        <p class="text-muted">Proudly ranked #2 in HKC (Hong Kong Convention) compliance.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -798,28 +916,60 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-6" data-aos="fade-right">
                     <span class="section-tag">TECHNICAL EXCELLENCE</span>
-                    <h2 class="section-title-v5 fw-800">Driving Innovation Through <span class="text-primary">ClassNK Compliance</span></h2>
-                    <p>At Salama International Green Ship Recycling, we are proud to be among the first in Pakistan actively working to meet the standards of ClassNK for the Safe and Environmentally Sound Recycling of Ships.</p>
+                    <h2 class="section-title-v5 fw-800">Driving Innovation Through <span class="text-primary">ClassNK
+                            Compliance</span></h2>
+                    <p>At Salama International Green Ship Recycling, we are proud to be among the first in Pakistan
+                        actively working to meet the standards of ClassNK for the Safe and Environmentally Sound
+                        Recycling of Ships.</p>
                     <div class="mt-4">
-                        <div class="d-flex mb-3"><i class="fas fa-check-circle text-primary fa-2x me-3"></i><div><h6 class="fw-800 mb-1">Environmentally safe dismantling processes</h6><p class="text-muted small">Zero harm to ecosystem with controlled dismantling.</p></div></div>
-                        <div class="d-flex mb-3"><i class="fas fa-hard-hat text-primary fa-2x me-3"></i><div><h6 class="fw-800 mb-1">Worker health and safety as a top priority</h6><p class="text-muted small">PPE, training, and medical facilities always.</p></div></div>
-                        <div class="d-flex mb-3"><i class="fas fa-trash-alt text-primary fa-2x me-3"></i><div><h6 class="fw-800 mb-1">Pollution prevention and proper waste handling</h6><p class="text-muted small">Zero discharge, certified waste streams.</p></div></div>
-                        <div class="d-flex"><i class="fas fa-chart-line text-primary fa-2x me-3"></i><div><h6 class="fw-800 mb-1">Transparent, traceable recycling records</h6><p class="text-muted small">Full lifecycle documentation & IHM reports.</p></div></div>
+                        <div class="d-flex mb-3"><i class="fas fa-check-circle text-primary fa-2x me-3"></i>
+                            <div>
+                                <h6 class="fw-800 mb-1">Environmentally safe dismantling processes</h6>
+                                <p class="text-muted small">Zero harm to ecosystem with controlled dismantling.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3"><i class="fas fa-hard-hat text-primary fa-2x me-3"></i>
+                            <div>
+                                <h6 class="fw-800 mb-1">Worker health and safety as a top priority</h6>
+                                <p class="text-muted small">PPE, training, and medical facilities always.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex mb-3"><i class="fas fa-trash-alt text-primary fa-2x me-3"></i>
+                            <div>
+                                <h6 class="fw-800 mb-1">Pollution prevention and proper waste handling</h6>
+                                <p class="text-muted small">Zero discharge, certified waste streams.</p>
+                            </div>
+                        </div>
+                        <div class="d-flex"><i class="fas fa-chart-line text-primary fa-2x me-3"></i>
+                            <div>
+                                <h6 class="fw-800 mb-1">Transparent, traceable recycling records</h6>
+                                <p class="text-muted small">Full lifecycle documentation & IHM reports.</p>
+                            </div>
+                        </div>
                     </div>
-                    <a href="#" class="btn btn-v5 btn-v5-primary mt-4">Discover More <i class="fas fa-arrow-right ms-2"></i></a>
+                    <a href="#" class="btn btn-v5 btn-v5-primary mt-4">Discover More <i
+                            class="fas fa-arrow-right ms-2"></i></a>
                 </div>
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="hkc-visual-showcase">
                         <div class="hkc-modern-grid">
                             <div class="hkc-art-card">
                                 <div class="premium-accent"><i class="fas fa-certificate me-1"></i> HKC CERTIFIED</div>
-                                <img src="https://thehamzadev.sirv.com/content/hkc1.jpeg" alt="HKC Compliance Certificate" class="hkc-img-modern">
-                                <div class="hkc-overlay-glow"><span class="hkc-badge-pill"><i class="fas fa-check-circle me-1"></i> Official Compliance</span><h6>Hong Kong Convention Standards</h6></div>
+                                <img src="https://thehamzadev.sirv.com/content/hkc1.jpeg"
+                                    alt="HKC Compliance Certificate" class="hkc-img-modern">
+                                <div class="hkc-overlay-glow"><span class="hkc-badge-pill"><i
+                                            class="fas fa-check-circle me-1"></i> Official Compliance</span>
+                                    <h6>Hong Kong Convention Standards</h6>
+                                </div>
                             </div>
                             <div class="hkc-art-card">
                                 <div class="premium-accent"><i class="fas fa-shield-alt me-1"></i> SAFETY FIRST</div>
-                                <img src="https://thehamzadev.sirv.com/content/hkc2.jpeg" alt="HKC Certified Operations" class="hkc-img-modern">
-                                <div class="hkc-overlay-glow"><span class="hkc-badge-pill"><i class="fas fa-leaf me-1"></i> Green Operations</span><h6>World-Class Environmental Safety</h6></div>
+                                <img src="https://thehamzadev.sirv.com/content/hkc2.jpeg" alt="HKC Certified Operations"
+                                    class="hkc-img-modern">
+                                <div class="hkc-overlay-glow"><span class="hkc-badge-pill"><i
+                                            class="fas fa-leaf me-1"></i> Green Operations</span>
+                                    <h6>World-Class Environmental Safety</h6>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -832,12 +982,37 @@
     <section class="section-padding">
         <div class="container">
             <div class="row g-5 align-items-center">
-                <div class="col-lg-6" data-aos="fade-right"><img src="https://thehamzadev.sirv.com/content/audit.jpeg" alt="Ship Dismantling" class="img-fluid rounded-4 shadow" style="border-radius: 30px;"></div>
-                <div class="col-lg-6" data-aos="fade-left"><span class="section-tag">COMPLIANCE EXCELLENCE</span><h2 class="section-title-v5 fw-800">Certification <span class="text-primary">Excellence</span> with <span class="text-primary">Confidence</span></h2><p class="text-muted fs-5">A memorable milestone celebrating the successful certification of Salam International in collaboration with the ClassNK audit team. This achievement reflects a strong commitment to regulatory compliance, operational excellence, and adherence to international standards, reinforcing trust, quality, and continuous improvement.</p></div>
+                <div class="col-lg-6" data-aos="fade-right"><img src="https://thehamzadev.sirv.com/content/audit.jpeg"
+                        alt="Ship Dismantling" class="img-fluid rounded-4 shadow" style="border-radius: 30px;"></div>
+                <div class="col-lg-6" data-aos="fade-left"><span class="section-tag">COMPLIANCE EXCELLENCE</span>
+                    <h2 class="section-title-v5 fw-800">Certification <span class="text-primary">Excellence</span> with
+                        <span class="text-primary">Confidence</span></h2>
+                    <p class="text-muted fs-5">A memorable milestone celebrating the successful certification of Salam
+                        International in collaboration with the ClassNK audit team. This achievement reflects a strong
+                        commitment to regulatory compliance, operational excellence, and adherence to international
+                        standards, reinforcing trust, quality, and continuous improvement.</p>
+                </div>
             </div>
             <div class="row mt-5 g-4">
-                <div class="col-md-6" data-aos="fade-up"><div class="p-4 border rounded-4 h-100 shadow-sm"><i class="fas fa-eye fa-2x text-primary mb-3"></i><h4 class="fw-800">Our Vision</h4><p class="text-muted">To become Pakistan’s most trusted ship recycling name by pioneering the shift toward ClassNK compliance, sustainable operations, and innovation-driven practices that ensure environmental safety, worker welfare, and responsible dismantling of end-of-life vessels.</p></div></div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100"><div class="p-4 border rounded-4 h-100 shadow-sm"><i class="fas fa-bullseye fa-2x text-primary mb-3"></i><h4 class="fw-800">Our Mission</h4><p class="text-muted">To deliver ship recycling services that prioritize environmental responsibility, worker safety, and regulatory compliance, while continuously improving our methods through innovation and global best practices to support a cleaner, safer, and more sustainable maritime industry.</p></div></div>
+                <div class="col-md-6" data-aos="fade-up">
+                    <div class="p-4 border rounded-4 h-100 shadow-sm"><i class="fas fa-eye fa-2x text-primary mb-3"></i>
+                        <h4 class="fw-800">Our Vision</h4>
+                        <p class="text-muted">To become Pakistan’s most trusted ship recycling name by pioneering the
+                            shift toward ClassNK compliance, sustainable operations, and innovation-driven practices
+                            that ensure environmental safety, worker welfare, and responsible dismantling of end-of-life
+                            vessels.</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="p-4 border rounded-4 h-100 shadow-sm"><i
+                            class="fas fa-bullseye fa-2x text-primary mb-3"></i>
+                        <h4 class="fw-800">Our Mission</h4>
+                        <p class="text-muted">To deliver ship recycling services that prioritize environmental
+                            responsibility, worker safety, and regulatory compliance, while continuously improving our
+                            methods through innovation and global best practices to support a cleaner, safer, and more
+                            sustainable maritime industry.</p>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
@@ -848,26 +1023,50 @@
             <div class="row g-5 align-items-stretch">
                 <div class="col-lg-7" data-aos="fade-right">
                     <span class="section-tag">COMPANY OVERVIEW</span>
-                    <h2 class="section-title-v5 fw-800">About Us | <span class="text-primary">Salama’s International</span> Green Ship Recycling</h2>
-                    <p class="lead">Salama International Green Ship Recycling is a leading industrial ship recycling firm specializing in marine safety and environmental sustainability. Our yard is located in Karachi, offering a wide range of services including dismantling, recycling, and disposal of end-of-life vessels.</p>
-                    <p class="text-muted">We are committed to providing high-quality services that adhere to international standards and contribute to a cleaner, safer, and more sustainable maritime industry.</p>
+                    <h2 class="section-title-v5 fw-800">About Us | <span class="text-primary">Salama’s
+                            International</span> Green Ship Recycling</h2>
+                    <p class="lead">Salama International Green Ship Recycling is a leading industrial ship recycling
+                        firm specializing in marine safety and environmental sustainability. Our yard is located in
+                        Karachi, offering a wide range of services including dismantling, recycling, and disposal of
+                        end-of-life vessels.</p>
+                    <p class="text-muted">We are committed to providing high-quality services that adhere to
+                        international standards and contribute to a cleaner, safer, and more sustainable maritime
+                        industry.</p>
                     <div class="mt-4 d-flex flex-wrap gap-3">
                         <div><i class="fas fa-phone-alt text-primary me-2"></i> +92-3130254986</div>
                         <div><i class="fas fa-envelope text-primary me-2"></i> salamships@gmail.com</div>
-                        <div><i class="fas fa-map-marker-alt text-primary me-2"></i> B-33A S.T.E Karcha-Pakistan 75700</div>
+                        <div><i class="fas fa-map-marker-alt text-primary me-2"></i> B-33/A S.I.T.E Karachi-Pakistan
+                            75700</div>
                     </div>
                     <div class="mt-4 pt-3 border-top border-light">
                         <div class="row g-3">
-                            <div class="col-sm-6"><div class="d-flex align-items-center"><i class="fas fa-check-circle text-primary fa-lg me-3"></i><span class="small fw-600">ClassNK Certified Facility</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center"><i class="fas fa-check-circle text-primary fa-lg me-3"></i><span class="small fw-600">HKC Convention Compliant</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center"><i class="fas fa-check-circle text-primary fa-lg me-3"></i><span class="small fw-600">ISO 14001:2015</span></div></div>
-                            <div class="col-sm-6"><div class="d-flex align-items-center"><i class="fas fa-check-circle text-primary fa-lg me-3"></i><span class="small fw-600">Zero HSE Incidents</span></div></div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center"><i
+                                        class="fas fa-check-circle text-primary fa-lg me-3"></i><span
+                                        class="small fw-600">ClassNK Certified Facility</span></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center"><i
+                                        class="fas fa-check-circle text-primary fa-lg me-3"></i><span
+                                        class="small fw-600">HKC Convention Compliant</span></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center"><i
+                                        class="fas fa-check-circle text-primary fa-lg me-3"></i><span
+                                        class="small fw-600">ISO 14001:2015</span></div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div class="d-flex align-items-center"><i
+                                        class="fas fa-check-circle text-primary fa-lg me-3"></i><span
+                                        class="small fw-600">Zero HSE Incidents</span></div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-lg-5" data-aos="fade-left">
                     <div class="about-image-card h-100 d-flex align-items-center justify-content-center">
-                        <img src="https://thehamzadev.sirv.com/content/gate.jpeg" alt="Salama International Green Ship Recycling Facility Gate" class="about-img w-100">
+                        <img src="https://thehamzadev.sirv.com/content/gate.jpeg"
+                            alt="Salama International Green Ship Recycling Facility Gate" class="about-img w-100">
                     </div>
                 </div>
             </div>
@@ -881,8 +1080,13 @@
 
                 <!-- Company Info -->
                 <div class="col-lg-4">
-                    <img src="images/Logo.jpg" alt="Logo" class="footer-logo-img rounded-circle mb-3" style="width:70px;">
-                    <h5 class="fw-bold text-success">Salam's International</h5>
+                    <img src="images/Logo.jpg" alt="Logo" class="footer-logo-img rounded-circle mb-3"
+                        style="width:70px;">
+                    <h4 class="mb-0 text-success fw-800"
+                        style="line-height: 1; letter-spacing: 1px; font-family: 'CCThatsAllFolks', sans-serif;">SALAM'S
+                        <span
+                            style="font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;">INTL</span>
+                    </h4>
                     <p class="mb-3">Green Ship Recycler</p>
 
                     <p class="mb-2">
@@ -896,10 +1100,17 @@
                     </p>
 
                     <div class="d-flex gap-3">
-                        <a href="#"><i class="fab fa-facebook-f text-primary fs-4"></i></a>
-                        <a href="#"><i class="fab fa-instagram text-primary fs-4"></i></a>
-                        <a href="#"><i class="fab fa-tiktok text-primary fs-4"></i></a>
-                        <a href="#"><i class="fab fa-linkedin-in text-primary fs-4"></i></a>
+                        <a href="https://www.facebook.com/share/18X341Y6Pm/?mibextid=wwXIfr"><i
+                                class="fab fa-facebook-f text-primary fs-4"></i></a>
+                        <a
+                            href="https://www.instagram.com/salaminternationalgreenyard?igsh=aWlsamd4NGRpcWdh&utm_source=qr"><i
+                                class="fab fa-instagram text-primary fs-4"></i></a>
+                        <a href="https://www.tiktok.com/@salamsinternationalgreen?_r=1&_t=ZS-95mibdv6idp"><i
+                                class="fab fa-tiktok text-primary fs-4"></i></a>
+                        <a href="https://www.linkedin.com/company/salam%E2%80%99s-international/"><i
+                                class="fab fa-linkedin-in text-primary fs-4"></i></a>
+                        <a href="https://youtube.com/@salamsinternationalgreenship?si=J9Jrc3z2bD8x5KUQ"><i
+                                class="fab fa-youtube text-primary fs-4"></i></a>
                     </div>
                 </div>
 
@@ -908,14 +1119,14 @@
                     <h6 class="fw-bold mb-3">USEFUL LINKS</h6>
                     <a href="#" class="footer-link-v5 d-block">Achievement & Certification</a>
                     <a href="#" class="footer-link-v5 d-block">Product & Services</a>
-                    <a href="#" class="footer-link-v5 d-block">Career</a>
+                    <a href="career.html" class="footer-link-v5 d-block">Career</a>
                 </div>
 
                 <!-- Company -->
                 <div class="col-lg-2">
                     <h6 class="fw-bold mb-3">COMPANY</h6>
                     <a href="#" class="footer-link-v5 d-block">About Us</a>
-                    <a href="#" class="footer-link-v5 d-block">Our Team</a>
+                    <a href="team.html" class="footer-link-v5 d-block">Our Team</a>
                     <a href="#" class="footer-link-v5 d-block">Contact</a>
                 </div>
 
@@ -934,7 +1145,7 @@
                 <p class="mb-2 mb-md-0">
                     © 2026 SALAM'S INTERNATIONAL GREEN SHIP RECYCLER | ALL RIGHTS RESERVED
                 </p>
-               
+
             </div>
         </div>
     </footer>
@@ -955,4 +1166,5 @@
         });
     </script>
 </body>
+
 </html>
