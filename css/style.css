@@ -195,6 +195,8 @@ h1, h2, h3, h4, h5, h6 {
     margin: 0 14px;
     transition: var(--transition-base);
     position: relative;
+    text-decoration: none !important;
+
 }
 
 .nav-link-v5::after {
