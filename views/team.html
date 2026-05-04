@@ -671,14 +671,121 @@
         body {
                margin-top: -24px;
         }
+        
+        #loader {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #000000, #0f1f0f);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    overflow: hidden;
+}
+
+/* Glass Effect */
+.loader-content {
+    text-align: center;
+    color: white;
+    position: relative;
+    z-index: 2;
+}
+
+/* Energy Ring */
+.energy-ring {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    border: 2px solid rgba(67,160,71,0.2);
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: rotateRing 6s linear infinite;
+}
+
+.energy-ring::before,
+.energy-ring::after {
+    content: "";
+    position: absolute;
+    border-radius: 50%;
+    border: 2px solid #43a047;
+    width: 100%;
+    height: 100%;
+    animation: pulse 2s infinite;
+}
+
+.energy-ring::after {
+    animation-delay: 1s;
+}
+
+@keyframes rotateRing {
+    0% { transform: translateX(-50%) rotate(0deg); }
+    100% { transform: translateX(-50%) rotate(360deg); }
+}
+
+@keyframes pulse {
+    0% { transform: scale(1); opacity: 1; }
+    100% { transform: scale(1.5); opacity: 0; }
+}
+
+/* Ship Animation */
+.ship {
+    font-size: 50px;
+    color: #43a047;
+    margin-bottom: 30px;
+    animation: floatShip 2s ease-in-out infinite;
+}
+
+@keyframes floatShip {
+    0%,100% { transform: translateY(0); }
+    50% { transform: translateY(-12px); }
+}
+
+/* Text */
+.loader-title {
+    font-weight: 800;
+    letter-spacing: 3px;
+    margin-top: 20px;
+}
+
+.loader-sub {
+    opacity: 0.7;
+    letter-spacing: 2px;
+}
+
+/* Fade Out */
+.loader-hidden {
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.8s ease;
+}
     </style>
 </head>
 <body>
 
+    <div id="loader">
+    <div class="loader-content">
+
+        <!-- Rotating Energy Ring -->
+        <div class="energy-ring"></div>
+
+        <!-- Ship Icon -->
+        <div class="ship">
+            <i class="fas fa-ship"></i>
+        </div>
+
+        <!-- Brand Text -->
+        <h2 class="loader-title">SALAM'S</h2>
+        <p class="loader-sub">Green Ship Recycling</p>
+
+    </div>
+</div>
     <!-- Navigation V5 -->
     <nav class="navbar navbar-expand-lg navbar-dark nav-v5 fixed-top">
         <div class="container">
-            <a class="navbar-brand d-flex align-items-center" href="index.html">
+            <a class="navbar-brand d-flex align-items-center" href="home">
                 <img src="https://thehamzadev.sirv.com/content/Logo.jpg" alt="Salam's International Logo" class="rounded-circle me-3" style="height: 80px; width: 80px; object-fit: cover; border: 2px solid #43a047;">
                   <div class="brand-text mt-3">
                     <h4 class="mb-0 text-white fw-800"  style="line-height: 1; letter-spacing: 1px; ">SALAM'S</h4>
@@ -691,35 +798,35 @@
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item">
-                        <a class="nav-link-v5 " href="index.html">HOME</a>
+                        <a class="nav-link-v5 " href="home">HOME</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-v5" href="about.html">ABOUT US</a>
+                        <a class="nav-link-v5" href="about">ABOUT US</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-v5 active" href="team.html">OUR TEAM</a>
+                        <a class="nav-link-v5 active" href="team">OUR TEAM</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-v5" href="services.html">PRODUCT & SERVICES</a>
+                        <a class="nav-link-v5" href="product-service">PRODUCT & SERVICES</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-v5" href="news.html">NEWS & EVENTS</a>
+                        <a class="nav-link-v5" href="news-events">NEWS & EVENTS</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-v5" href="hse.html">HSE MANAGEMENT</a>
+                        <a class="nav-link-v5" href="hse">HSE MANAGEMENT</a>
                     </li>
 
                     <li class="nav-item">
-                        <a class="nav-link-v5" href="career.html">CAREERS</a>
+                        <a class="nav-link-v5" href="career">CAREERS</a>
                     </li>
 
                     <li class="nav-item ms-lg-4">
-                        <a href="contact.html" class="btn btn-v5 btn-v5-primary">CONTACT</a>
+                        <a href="contact" class="btn btn-v5 btn-v5-primary">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -893,7 +1000,7 @@
             <div class="card-modern p-5 text-center" data-aos="zoom-in">
                 <h2 class="fw-800 mb-4">Want to be part of our <span class="text-primary">expert team?</span></h2>
                 <p class="lead mb-5 mx-auto" style="max-width: 600px;">We are always looking for passionate individuals who share our vision for a sustainable maritime future.</p>
-                <a href="career.html" class="btn btn-v5 btn-v5-primary px-5 py-3">VIEW CAREER OPPORTUNITIES</a>
+                <a href="career" class="btn btn-v5 btn-v5-primary px-5 py-3">VIEW CAREER OPPORTUNITIES</a>
             </div>
         </div>
     </section>
@@ -928,23 +1035,23 @@
                 <!-- Useful Links -->
                 <div class="col-lg-2">
                     <h6 class="fw-bold mb-3">USEFUL LINKS</h6>
-                    <a href="services.html" class="footer-link-v5 d-block">Product & Services</a>
-                    <a href="career.html" class="footer-link-v5 d-block">Career</a>
+                    <a href="product-service" class="footer-link-v5 d-block">Product & Services</a>
+                    <a href="career" class="footer-link-v5 d-block">Career</a>
                 </div>
 
                 <!-- Company -->
                 <div class="col-lg-2">
                     <h6 class="fw-bold mb-3">COMPANY</h6>
-                    <a href="about.html" class="footer-link-v5 d-block">About Us</a>
-                    <a href="team.html" class="footer-link-v5 d-block">Our Team</a>
-                    <a href="contact.html" class="footer-link-v5 d-block">Contact</a>
+                    <a href="about" class="footer-link-v5 d-block">About Us</a>
+                    <a href="team" class="footer-link-v5 d-block">Our Team</a>
+                    <a href="contact" class="footer-link-v5 d-block">Contact</a>
                 </div>
 
                 <!-- Quick Links -->
                 <div class="col-lg-2">
                     <h6 class="fw-bold mb-3">QUICK LINKS</h6>
-                    <a href="news.html" class="footer-link-v5 d-block">News & Events</a>
-                    <a href="hse.html" class="footer-link-v5 d-block">HSE Management</a>
+                    <a href="news-events" class="footer-link-v5 d-block">News & Events</a>
+                    <a href="hse" class="footer-link-v5 d-block">HSE Management</a>
                 </div>
 
             </div>
@@ -964,6 +1071,13 @@
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js"></script>
     <script>
+         window.addEventListener("load", function () {
+        const loader = document.getElementById("loader");
+
+        setTimeout(() => {
+            loader.classList.add("loader-hidden");
+        }, 1200); 
+    });
         AOS.init({ once: true, duration: 1000 });
         $(window).scroll(function () { if ($(this).scrollTop() > 50) $('.nav-v5').addClass('scrolled'); else $('.nav-v5').removeClass('scrolled'); });
 

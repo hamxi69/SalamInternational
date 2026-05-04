@@ -1,0 +1,40 @@
+const routes = {
+    Home:{
+        path:'/home',
+        component:'index.html'
+    },
+    About:{
+        path:'/about',
+        component:'about.html'
+    },
+    Team:{
+      path:'/team',
+      component:'team.html'  
+    },
+    ProductAndService:{
+        path:'/product-service',
+        component:'services.html'
+    },
+     NewsAndEvents:{
+        path:'/news-events',
+        component:'news.html'
+    },
+    HSEManagement:{
+        path:'/hse',
+        component:'hse.html'
+    },
+    Careers:{
+        path:'/career',
+        component:'career.html'
+    },
+    Contact:{
+        path:'/contact',
+        component:'contact.html'
+    },
+    NotFound:{
+        path:'/notfound',
+        component:'notfound.html'
+    }
+};
+
+export {routes};

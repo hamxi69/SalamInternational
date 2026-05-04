@@ -1,0 +1,10 @@
+{
+  "type": "module",
+  "name": "Salams-International",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "build": "echo 'No build step specified'"
+  },
+  "dependencies": {}
+}
